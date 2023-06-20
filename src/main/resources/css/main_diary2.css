@@ -1,0 +1,73 @@
+#menu #box 
+{
+  position: relative;
+  box-sizing: border-box;
+  width: 1920px;
+  height: 129px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+#menu #logo
+{
+  position: absolute;
+  width: 107px;
+  height: 107px;
+  left: 52px;
+  top: 11px;
+  background: url(TTT-로고-2.png);
+}
+
+#line
+{
+  position: absolute;
+  width: 170px;
+  height: 6px;
+  left: 217px;
+  top: 123px;
+  background: linear-gradient(90deg, #1E6275 0%, #BAEFFF 100%);
+}
+
+#menu ul
+{
+	list-style:none;
+  display: inline-block;
+	position:absolute;
+	float:left;
+	margin:0;
+	padding:0
+}
+
+#menu ul a
+{
+  height: 129px;
+  display: inline-block;
+	text-decoration: none;
+	font-style: normal;
+  align-items: center;
+  font-size: 30px;
+  padding: 65px;
+  position: relative;
+	color: #464646;
+  font-weight: 400;
+  float:left;
+	font-family: 'AppleSDGothicNeoB00';
+}
+
+#menu ul li
+{
+  height: 129px;
+  display: inline-block;
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0
+}
+
+#menu ul li:hover
+{
+	background:#f6f6f6
+}

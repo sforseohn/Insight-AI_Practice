@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --clr-primary: #F70058;
+    --clr-dark: #0C0E36;
+    --clr-light: #FFF;
+    /* font weights */
+    --fw-normal: 400;    
+    --fw-bold: 700;
+    --fw-black: 900;
+    --grid: minmax(1em, 1fr)
+            min-content
+            minmax(20rem, 45ch)
+            1fr
+            minmax(1em, 3fr);
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.125rem;
+    color: var(--clr-dark);
+    line-height: 1.6;
+    background: gray;
+}
+
+header {
+    background-color: var(--clr-light);
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo {
+    margin-top: 1em;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 1em;
+
+    list-style: none;
+    font-size: 0.875m; /* 14 / 16 */
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    letter-spacing: 1px;
+
+}
+
+.nav__list-item {
+    margin-left: 3em;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.weather {
+    display: grid;
+    grid-template-columns: min-content, 1fr;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+.weather__icon {
+    grid-row: span 2;
+    background-color: var(--clr-primary);
+    padding: .5rem;
+    display: flex;
+}
+
+.weather__info {
+    margin: 0;
+    margin-left: .5rem;
+    text-align: left;
+}
+
+.weather__info:first-of-type {
+    margin-top: .5rem;
+    position: relative;
+}
+
+.weather__info:first-of-type::after {
+    margin-top: .5rem;
+    position: absolute;
+    width: calc(100% - .75rem);
+    bottom: 0;
+}
+
+.weather__info:last-of-type {
+    margin-bottom: .5rem;
+}
+
+@media (min-width: 500px) { /* 페이지가 어색해지는 지점 */
+    .main {
+        display: grid;
+        grid-template-columns: 
+            minmax(1em, 1fr) minmax(20rem, 50ch) minmax(1em, 3fr);
+        justify-items: start;
+    }
+
+    .main > * { grid-column: 2/3; }
+
+    .main--ski {
+        background-position: left bottom;
+    }
+}
+
+@media (min-width: 700px) {
+    header {
+        display: grid;
+        grid-template-columns: var(--grid);
+    }
+
+    .logo,
+    .nav,
+    .weather {
+        grid-row: 1;
+    }
+
+    .logo {
+        margin-top: 0;
+    }
+
+    .nav {
+        grid-column: 2 / 4;
+        justify-self: end;
+    }
+
+    .weather {
+        grid-column: -2 / -1; /* last cell */
+        justify-self: end;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: .5em 1.25em;
+    letter-spacing: 1px;
+    margin-bottom: .75em;
+}
+
+.btn + .btn {
+    margin-left: 1em;
+}
+
+.btn--primary {
+    background-color: var(--clr-primary);
+    color: var(--clr-light);
+}
+
+.btn--primary::hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-dark);
+}

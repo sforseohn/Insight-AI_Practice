@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --clr-primary: #1E6275;
+    --clr-grad: #BAEFFF;
+    --clr-dark: #464646;
+    --clr-gray: #969696;
+    --clr-light: #FFF;
+    --clr-solid: #F8F9F9;
+
+    /* font weights */
+    --fw-normal: 400;    
+    --fw-bold: 600;
+    --fw-black: 900;
+}
+
+body {
+    margin: 0;
+    font-family: 'NanumBarunGothic', sans-serif;
+    font-size: 1.125rem;
+    color: var(--clr-dark);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--clr-light);
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    margin-top: 1em;
+}
+
+.nav__list {
+    float: left;
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 1em;
+
+    list-style: none;
+    font-size: 0.875m; /* 14 / 16 */
+    font-weight: var(--fw-bold);
+    letter-spacing: 1px;
+}
+
+.nav__list-item {
+    margin-left: 3em;
+}
+
+.nav__list-item:hover
+{
+	background: var(--clr-primary);
+    color: var(--clr-light)
+}
+
+.nav__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.status {
+    margin-right: .5rem;
+    align-items: center;
+    display: grid;
+}
+
+.profile {
+    grid-row: 1;
+    padding: .5rem;
+}
+
+.email {
+    grid-row: 1;
+    color: var(--clr-primary);
+}
+
+.logout {
+    grid-row: 1;
+    color: var(--clr-gray);
+}
+
+.main--back {
+    background-color: var(--clr-solid);
+}
+
+.btn btn__image, 
+.btn btn__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn btn__GPT {
+    text-decoration: none;
+    color: inherit;
+
+    background: linear-gradient(90.05deg, var(--clr-primary) 0.05%, var(--clr-grad) 99.97%);
+    box-shadow: 0px 0px 10px rgba(30, 98, 117, 0.5);
+    border-radius: 20px;
+}
+
+.main--box {
+    background: var(--clr-light);
+    box-shadow: 0px 0px 30px rgba(30, 98, 117, 0.25);
+    border-radius: 20px;
+}
+
+.main__title {
+    top: 300px;
+    left: 300px;
+    color: var(--clr-primary);
+}
+
+.main__title::after {
+    margin-top: .5rem;
+    position: absolute;
+    width: calc(100% - .75rem);
+    height: 50px;
+    bottom: 0;
+    background: var(--clr-primary);
+    border: 2px solid rgba(30, 98, 117, 0.6);
+}
